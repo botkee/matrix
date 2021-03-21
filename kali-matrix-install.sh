@@ -1,6 +1,9 @@
 #!/bin/bash
 # Usage: wget -O run https://raw.githubusercontent.com/botkee/matrix/master/kali-matrix-install.sh && sudo chmod +x run && sudo bash run
 
+
+cd /tmp/
+
 sudo apt install -y wget apt-transport-https
 
 sudo wget -O /usr/share/keyrings/riot-im-archive-keyring.gpg https://packages.riot.im/debian/riot-im-archive-keyring.gpg
@@ -9,10 +12,9 @@ echo "deb [signed-by=/usr/share/keyrings/riot-im-archive-keyring.gpg] https://pa
 
 sudo apt update
 
-cd /tmp/
-
 curl -p --insecure http://ftp.br.debian.org/debian/pool/main/libi/libindicator/libindicator3-7_0.5.0-4_amd64.deb --output libindicator3-7_0.5.0-4_amd64.deb
 sudo dpkg -i libindicator3-7_0.5.0-4_amd64.deb
+
 curl -p --insecure "http://ftp.br.debian.org/debian/pool/main/liba/libappindicator/libappindicator3-1_0.4.92-8_amd64.deb" --output libappindicator3-1_0.4.92-8_amd64.deb
 sudo dpkg --install libappindicator3-1_0.4.92-8_amd64.deb
 
@@ -22,6 +24,7 @@ sudo apt install element-desktop
 rm libindicator3-7_0.5.0-4_amd64.deb
 rm libappindicator3-1_0.4.92-8_amd64.deb
 rm run
+
 cd
 
 #optional
