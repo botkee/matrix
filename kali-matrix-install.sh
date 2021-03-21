@@ -1,5 +1,5 @@
 #!/bin/bash
-# Usage: curl -O https://raw.githubusercontent.com/botkee/matrix/master/kali-matrix-install.sh > run && sudo chmod +x run && sudo bash run
+# Usage: curl -O https://raw.githubusercontent.com/botkee/matrix/master/kali-matrix-install.sh run && sudo chmod +x run && sudo bash run
 
 sudo apt install -y wget apt-transport-https
 
